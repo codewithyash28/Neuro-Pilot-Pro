@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeuroPilot Pro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>NeuroPilot Pro</h1>
+    <div id="status">Press ▶️ and say a command (e.g. "Open YouTube")</div>
+    <div class="controls">
+      <button id="startBtn">▶️ Start</button>
+      <button id="stopBtn" disabled>⏹ Stop</button>
+      <button id="optionsBtn">⚙️ Options</button>
+    </div>
+    <input id="textInput" placeholder="Or type a command and press Run" />
+    <div class="buttons">
+      <button id="runText">Run</button>
+      <button id="summarize">Summarize (AI)</button>
+      <button id="localOpen">Open in Comet</button>
+    </div>
+    <div id="log"></div>
+    <footer>NeuroPilot Pro • say "open youtube", "search cats", "open gmail", "new tab", "close tab"</footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

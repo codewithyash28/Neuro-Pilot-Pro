@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>NeuroPilot Pro - Options</title>
+<style>
+body{font-family:Arial;padding:12px;background:#f7f9fc}
+label{display:block;margin-top:8px}
+input[type=text], textarea{width:100%;padding:8px;border-radius:6px;border:1px solid #ccc}
+button{margin-top:8px;padding:8px;border-radius:6px}
+small{color:#666}
+</style>
+</head>
+<body>
+  <h2>NeuroPilot Pro - Settings</h2>
+  <label>OpenAI API Key
+    <input id="apiKey" type="text" placeholder="sk-..." />
+  </label>
+  <label>Local Bridge URL (optional)
+    <input id="bridge" type="text" placeholder="http://localhost:5000" />
+    <small>Set this if you want PC-level commands via local bridge.</small>
+  </label>
+  <button id="save">Save</button>
+  <div id="status"></div>
+
+<script>
+document.getElementById('save').addEventListener('click', () => {
+  const key = document.getElementById('apiKey').value.trim();
+  const bridge = document.getElementById('bridge').value.trim();
+  chrome.storage.sync.set({openai_api_key: key, local_bridge_url: bridge}, () => {
+    document.getElementById('status').textContent = 'Saved.';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  chrome.storage.sync.get(['openai_api_key','local_bridge_url'], (items) => {
+    document.getElementById('apiKey').value = items.openai_api_key || '';
+    document.getElementById('bridge').value = items.local_bridge_url || '';
+  });
+});
+</script>
+</body>
+</html>
