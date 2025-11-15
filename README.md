@@ -2,6 +2,8 @@
 
 Advanced voice-driven browser assistant with optional PC automation.
 
+![NeuroPilot Pro Logo](icons/icon128.png)
+
 ## What you get
 - Chrome extension (NeuroPilot Pro) with:
   - Voice commands in popup (Web Speech API)
@@ -26,19 +28,17 @@ Advanced voice-driven browser assistant with optional PC automation.
    - In Options, set Local Bridge URL to `http://localhost:5000`.
 7. Try it: open a web article, click the extension popup and press Summarize (AI).
 
-## Security notes
-- Keep your OpenAI key private. Chrome's `chrome.storage.sync` encrypts for your profile but do not share exported data.
-- The local bridge must be run only on your machine. Do not open the port to the internet.
-- The local bridge launches programs via AutoHotkey; check `actions.ahk` before running.
+## License
+This project is licensed under the MIT License. See `LICENSE.txt`.
 
-## Hackathon tips
-- For the demo: record a short video and have a live demo fallback.
-- Highlight: safety (confirmation before local actions) and integration (voice + AI + native control).
-- Include a one-page architecture diagram.
-
-## Need help?
-I can:
-- Add a settings UI to store per-action confirmations.
-- Create a packaged installer for the local bridge.
-- Make a demo video script.
-
+## Hackathon demo video guide
+- Total length: 60–90 seconds
+- Key features to show:
+  1. Voice command: "Open YouTube" → NeuroPilot opens YouTube in a new tab.
+  2. AI summary: Open a webpage → press "Summarize" → overlay shows 6 bullet points + 1-line TL;DR.
+  3. Local bridge: "Open Notepad" or "Open Comet" via extension → AHK opens app on PC.
+- Tips:
+  - Use OBS Studio (free) to record screen and microphone.
+  - Keep narration simple: explain each feature as it happens.
+  - Show Options page briefly to demonstrate API key and local bridge setup.
+  - End with your logo on screen and project name.
