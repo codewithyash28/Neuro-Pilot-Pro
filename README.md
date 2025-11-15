@@ -31,14 +31,3 @@ Advanced voice-driven browser assistant with optional PC automation.
 ## License
 This project is licensed under the MIT License. See `LICENSE.txt`.
 
-## Hackathon demo video guide
-- Total length: 60–90 seconds
-- Key features to show:
-  1. Voice command: "Open YouTube" → NeuroPilot opens YouTube in a new tab.
-  2. AI summary: Open a webpage → press "Summarize" → overlay shows 6 bullet points + 1-line TL;DR.
-  3. Local bridge: "Open Notepad" or "Open Comet" via extension → AHK opens app on PC.
-- Tips:
-  - Use OBS Studio (free) to record screen and microphone.
-  - Keep narration simple: explain each feature as it happens.
-  - Show Options page briefly to demonstrate API key and local bridge setup.
-  - End with your logo on screen and project name.
